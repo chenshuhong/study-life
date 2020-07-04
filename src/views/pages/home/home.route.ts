@@ -6,5 +6,5 @@ export default function (path = '') {
       title: '首页'
     },
     component: () => import(/* webpackChunkName: "home" */ './home.vue')
-  }
+  };
 }

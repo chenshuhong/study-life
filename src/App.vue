@@ -5,15 +5,14 @@
 </template>
 
 <script lang="ts">
-import zhCN from 'ant-design-vue/lib/locale-provider/zh_CN'
-import moment from 'moment'
-import 'moment/locale/zh-cn'
-import { Component, Vue } from 'vue-property-decorator'
-moment.locale('zh-cn')
+import zhCN from 'ant-design-vue/lib/locale-provider/zh_CN';
+import moment from 'moment';
+import {Component, Vue} from 'vue-property-decorator';
+moment.locale('zh-cn');
 @Component({})
 export default class App extends Vue {
-    zhCN=zhCN
-};
+  zhCN = zhCN;
+}
 </script>
 
 <style lang="less">
@@ -23,7 +22,7 @@ export default class App extends Vue {
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
   height: 100%;
-  >*{
+  > * {
     min-height: 100vh;
   }
 }

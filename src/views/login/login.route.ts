@@ -1,7 +1,12 @@
+import {Route} from 'vue-router';
+import store from '@/store';
 export default function (path = '/login') {
   return {
     path,
     component: () => import(/* webpackChunkName: "login" */ './login.vue'),
-    name: 'Login'
-  }
+    name: 'Login',
+    beforeEnter(to: Route, from: Route, next: any) {
+      store.state.user ? next({name: 'Home'}) : next();
+    }
+  };
 }

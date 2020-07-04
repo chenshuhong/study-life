@@ -4,16 +4,13 @@ module.exports = {
     node: true
   },
   extends: [
-    'plugin:vue/essential',
     '@vue/standard',
-    '@vue/typescript/recommended'
+    'plugin:vue/essential',
+    '@vue/prettier',
+    '@vue/typescript'
   ],
   parserOptions: {
-    ecmaVersion: 2020
-  },
-  rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    parser: '@typescript-eslint/parser'
   },
   overrides: [
     {
@@ -26,4 +23,4 @@ module.exports = {
       }
     }
   ]
-}
+};
