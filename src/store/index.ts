@@ -1,9 +1,8 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
   state: {
     user: null
   },
@@ -16,3 +15,8 @@ export default new Vuex.Store({
   actions: {},
   modules: {}
 });
+
+const user = localStorage.getItem('user');
+store.commit('user', user && JSON.parse(user));
+
+export default store;
